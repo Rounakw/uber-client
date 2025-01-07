@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const userDataContext = React.createContext()
+export const UserDataContext = React.createContext()
 
 function UserContext({ children }) {
 
@@ -14,9 +14,9 @@ function UserContext({ children }) {
 
   return (
     <div>
-      <userDataContext.Provider value={{ user, setUser }}>
+      <UserDataContext.Provider value={{ user, setUser }}>
         {children}
-      </userDataContext.Provider>
+      </UserDataContext.Provider>
     </div>
   )
 }

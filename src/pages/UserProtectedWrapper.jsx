@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { userDataContext } from '../context/userContext';
+import { userDataContext } from '../context/UserContext';
 import axios from 'axios';
 import Loading from './Loading';
 
@@ -33,7 +33,7 @@ const UserProtectedWrapper = ({ children }) => {
         return <Loading />
     }
 
-    return <>{children}</>; 
+    return <>{children}</>;
 
 }
 
