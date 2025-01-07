@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { userDataContext } from '../context/UserContext';
+import { UserDataContext } from '../context/UserContext';
 import { toast, ToastContainer } from 'react-toastify'
 import Loading from './Loading'
 
@@ -11,7 +11,7 @@ function UserLogin() {
   const [isLoading, setIsLoading] = useState(false)
 
   const navigate = useNavigate();
-  const { user, setUser } = React.useContext(userDataContext);
+  const { user, setUser } = React.useContext(UserDataContext);
 
   const submitHandler = async (e) => {
     setIsLoading(true)
