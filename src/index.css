@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.Toastify {
+    position: fixed !important;
+    z-index: 9999;
+    pointer-events: none; /* Prevents it from interacting with clicks on other elements */
+  }
+  
