@@ -2,7 +2,7 @@ import React from 'react'
 
 export const userDataContext = React.createContext()
 
-function userContext({ children }) {
+function UserContext({ children }) {
 
   const [user, setUser] = React.useState({
     fullname: {
@@ -21,4 +21,4 @@ function userContext({ children }) {
   )
 }
 
-export default userContext
+export default UserContext
