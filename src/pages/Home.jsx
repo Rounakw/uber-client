@@ -19,14 +19,18 @@ function Home() {
   useGSAP(function () {
     if (panelOpen) {
       gsap.to(panelRef.current, {
+        display: 'block',
         height: '70%',
         padding: '20px',
       })
       gsap.to(pannelCloseRef.current, {
         opacity: 1
       })
-    } else {
+    }
+
+    if (!panelOpen) {
       gsap.to(panelRef.current, {
+        display: 'none',
         height: '0%',
         padding: '0',
       })
@@ -37,7 +41,7 @@ function Home() {
   }, [panelOpen])
 
   return (
-    <div className='h-screen relative'>
+    <div className='h-screen relative bg-red-500'>
       <img className='w-16 absolute  left-5 top-5' src="https://logodix.com/logo/54423.png" alt="" />
       <div className='h-screen w-screen'>
         {/* image for temporary use */}
@@ -69,7 +73,7 @@ function Home() {
               placeholder='Enter your destination' />
           </form>
         </div>
-        <div ref={panelRef} className='bg-white h-0'>
+        <div ref={panelRef} className='bg-red-200 hidden'>
           <LocationSearchPanel />
         </div>
       </div>
